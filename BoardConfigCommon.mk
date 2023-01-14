@@ -16,13 +16,13 @@
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-COMMON_PATH := device/samsung/m31-common
+COMMON_PATH := device/samsung/exynos9611-common
 
 ## Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 ## Inherit proprietary vendor configuartion
-include vendor/samsung/m31-common/BoardConfigVendor.mk
+include vendor/samsung/exynos9611-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64

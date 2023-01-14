@@ -6,8 +6,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE=m31
-DEVICE_COMMON=m31-common
+DEVICE=${TARGET_DEVICE}
+DEVICE_COMMON=exynos9611-common
 VENDOR=samsung
 
 set -e
@@ -29,7 +29,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "m31"
+write_headers "a51 m31 m21 f41 m31s"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true

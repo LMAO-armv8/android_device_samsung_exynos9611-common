@@ -6,8 +6,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE=m31
-DEVICE_COMMON=m31-common
+DEVICE=${TARGET_DEVICE}
+DEVICE_COMMON=exynos9611-common
 VENDOR=samsung
 
 set -e

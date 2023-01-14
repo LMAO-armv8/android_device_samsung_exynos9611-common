@@ -17,9 +17,30 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
+#include <cutils/properties.h>
+#include <string.h>
+
 #pragma push_macro("PROPERTY_VALUE_MAX")
 
-#define BTM_DEF_LOCAL_NAME "Galaxy M31"
+static inline const char* BtmGetDefaultName()
+{
+    char product_device[PROPERTY_VALUE_MAX];
+    property_get("ro.product.device", product_device, "");
+
+    if (strstr(product_device, "m31"))
+        #define BTM_DEF_LOCAL_NAME "Galaxy M31"
+    else if (strstr(product_device, "a51"))
+        #define BTM_DEF_LOCAL_NAME "Galaxy A51"
+    else if (strstr(product_device, "m21"))
+        #define BTM_DEF_LOCAL_NAME "Galaxy M21"
+    else if (strstr(product_device, "f41"))
+        #define BTM_DEF_LOCAL_NAME "Galaxy F41"
+    else if (strstr(product_device, "m31s"))
+        #define BTM_DEF_LOCAL_NAME "Galaxy M31s"
+    // Fallback to Default
+    else
+        #define BTM_DEF_LOCAL_NAME "Samsung Galaxy"
+}
 
 /*
  * Toggles support for vendor specific extensions such as RPA offloading,
