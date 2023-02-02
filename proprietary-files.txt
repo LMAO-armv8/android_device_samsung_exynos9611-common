@@ -68,6 +68,8 @@ vendor/lib64/libsynaFpSensorTestNwd.so
 -vendor/lib64/libsensorlistener.so
 -vendor/lib64/libuniapi.so
 -vendor/lib64/libuniplugin.so
+vendor/lib/libremosaic_daemon.so
+vendor/lib64/libremosaic_daemon.so
 
 ## Codecs
 vendor/etc/media_codecs_c2_sec.xml
@@ -88,7 +90,6 @@ vendor/firmware/calliope_sram.bin
 vendor/firmware/CC_DRAM_CODE_FLASH.bin
 vendor/firmware/CC_DTCM_CODE_FLASH.bin
 vendor/firmware/CC_ITCM_CODE_FLASH.bin
-vendor/firmware/CP_AUDIO_SLSI_SEA.bin
 vendor/firmware/CP_AUDIO_SLSI_SWA.bin
 vendor/firmware/dax_param.bin
 vendor/firmware/fimc_is_lib.bin
@@ -99,15 +100,12 @@ vendor/firmware/kernel_bin_mfb.bin
 vendor/firmware/kernel_bin_mobile_vgg.bin
 vendor/firmware/kernel_bin_nfd.bin
 vendor/firmware/mfc_fw.bin
-vendor/firmware/nfc/sec_s3nrn82_firmware.bin
 vendor/firmware/rtdsp.bin
 vendor/firmware/rtdsp_param.bin
-vendor/firmware/setfile_4ha.bin
-vendor/firmware/setfile_gc5035.bin
-vendor/firmware/setfile_gc5035_macro.bin
-vendor/firmware/setfile_gw1.bin
-vendor/firmware/setfile_imx616.bin
 vendor/firmware/SoundBoosterParam.bin
+vendor/lib/libstagefright_bufferqueue_helper_vendor.so
+vendor/lib/libstagefright_omx_vendor.so
+
 
 ## Gatekeeper
 -vendor/lib/hw/gatekeeper.exynos9611.so
@@ -150,6 +148,8 @@ vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
 -vendor/lib64/libexynosutils.so
 -vendor/lib64/libexynosv4l2.so
 -vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 
 ##
 -vendor/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
@@ -208,6 +208,7 @@ vendor/app/mcRegistry/09090000070100010000000000000000.tlbin
 ## RIL
 -vendor/lib/libaudio-ril.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos9611
+vendor/lib64/libril_sem.so
 
 ## SECNATIVE
 -vendor/lib/libsecnativefeature.so
@@ -254,10 +255,9 @@ vendor/etc/sensors/hals.conf
 -vendor/lib64/sensors.inputvirtual.so
 
 ## Widevine
--vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 -vendor/lib/libwvhidl.so
+vendor/lib/libwvhidl@1.3.so
+
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc

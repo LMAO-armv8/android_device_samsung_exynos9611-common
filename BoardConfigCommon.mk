@@ -119,7 +119,9 @@ TARGET_SEC_FP_HAS_FINGERPRINT_GESTURES := true
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_USE_DEFAULT_CLANG := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/m31
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos9611-common
+KERNEL_TOOLCHAIN_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-eun/bin/aarch64-linux-gnu-
+TARGET_KERNEL_CLANG_VERSION := eun
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung

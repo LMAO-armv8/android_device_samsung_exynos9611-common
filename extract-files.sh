@@ -6,7 +6,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE=${TARGET_DEVICE}
 DEVICE_COMMON=exynos9611-common
 VENDOR=samsung
 
@@ -88,14 +87,14 @@ fi
 BLOB_ROOT="$ANDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
 
 # Remove libhidltransport dependencie
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+patchelf --remove-needed libhidltransport.so $BLOB_ROOT/../../"$DEVICE"/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libstagefright_bufferqueue_helper_vendor.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libstagefright_omx_vendor.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libwvhidl.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/sensors.sensorhub.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/sensors.sensorhub.so
 # Remove libhwbinder dependencie
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+patchelf --remove-needed libhwbinder.so $BLOB_ROOT/../../"$DEVICE"/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libwvhidl.so
 
 # Protobuf
